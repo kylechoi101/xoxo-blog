@@ -22,11 +22,11 @@ First, I generated avatars. An avatar is a mini version of you, so it has to car
 
 ## Sep 1 – 5 · Moods
 
-Next, I wanted to see whether the avatars could be altered by mood keywords. At first I just said “make it look angry”, but Apple clearly had a different vision from mine. I also needed them to be kawaii. So I reversed the process: I had Gemini draw a reference image for each mood, had Claude describe that picture, and used the description as the keyword for the mood tile.
+Next, I wanted to see whether the avatars could be altered by mood keywords. At first I just said “make it look hungry”, but Apple clearly had a different vision from mine. I also needed them to be kawaii. So I reversed the process: I had Gemini draw a reference image for each mood, had Claude describe that picture, and used the description as the keyword for the mood tile.
 
-<table><tr><td align="center"><img src="assets/img/0104.jpg" width="300" alt="Reference art (Gemini), not drawn by Playground"><br><sub>Angry, as Gemini imagined it</sub></td><td align="center"><img src="assets/img/0105.jpg" width="300" alt="MacBook Pro 16″ (M4, Mac16,7) · macOS 27.0"><br><sub>Playground’s take on the same brief</sub></td></tr></table>
+<table><tr><td align="center"><img src="assets/img/0104.jpg" width="300" alt="Reference art (Gemini), not drawn by Playground"><br><sub>Hungry, as Gemini imagined it</sub></td><td align="center"><img src="assets/img/0105.jpg" width="300" alt="MacBook Pro 16″ (M4, Mac16,7) · macOS 27.0"><br><sub>Playground’s take on the same brief</sub></td></tr></table>
 
-500 drawings in this round. The rest are in the dropdown on the live page.
+497 drawings in this round. The rest are in the dropdown on the live page.
 
 ## Sep 5 · First phone rounds
 
@@ -58,7 +58,7 @@ The results were getting better by then, so I built a scoring system to track th
 
 <table><tr><td align="center"><img src="assets/img/0284.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>Body clause last: a head</sub></td><td align="center"><img src="assets/img/0285.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>Body clause first: the whole body, 3 of 3</sub></td></tr></table>
 
-57 drawings in this round. The rest are in the dropdown on the live page.
+54 drawings in this round. The rest are in the dropdown on the live page.
 
 ## Sep 13 – 15 · Avatar labs
 
