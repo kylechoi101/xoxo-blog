@@ -194,7 +194,7 @@
     card.innerHTML = '<div class="row"><span class="lbl">iPhone model</span><span class="val">' + esc(meta.devices[+im.getAttribute('data-d')]) + '</span></div>' +
       '<div class="row"><span class="lbl">Prompt</span><span class="val">' + esc(shown) + '</span></div>' +
       (pin ? '<div class="acts"><button type="button" id="copyp">Copy prompt</button>' + (commentsNs ? '<button type="button" id="cmtp">Comment on this picture</button>' : '') + '<button type="button" id="closep">Close</button></div>' : '');
-    card.hidden = false; place(im);
+    card.hidden = false; place(im); startWatch();
     if (pin) {
       document.getElementById('copyp').onclick = function () {
         var b = this;
@@ -209,7 +209,17 @@
     card.innerHTML = '<div class="row"><span class="val">' + esc(el.getAttribute('data-tip')) + '</span></div>';
     card.hidden = false; place(el);
   }
-  function hideCard() { clearTimeout(hoverT); shownFor = null; pinned = false; card.hidden = true; }
+  var watch = null;
+  function startWatch() {
+    clearInterval(watch);
+    watch = setInterval(function () {
+      if (!shownFor) { clearInterval(watch); return; }
+      var over = false;
+      try { over = shownFor.matches(':hover') || (pinned && card.matches(':hover')); } catch (e) { over = true; }
+      if (!over && !(pinned && document.activeElement && card.contains(document.activeElement))) hideCard();
+    }, 150);
+  }
+  function hideCard() { clearTimeout(hoverT); clearInterval(watch); shownFor = null; pinned = false; card.hidden = true; }
   app.addEventListener('mouseover', function (e) {
     if (pinned) return;
     clearTimeout(hoverT);
@@ -234,6 +244,8 @@
   }, { passive: true });
   document.addEventListener('visibilitychange', hideCard);
   window.addEventListener('blur', hideCard);
+  document.addEventListener('mouseleave', hideCard);
+  document.documentElement.addEventListener('mouseleave', hideCard);
   app.addEventListener('keydown', function (e) {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     var im = e.target.closest && e.target.closest('img[data-d]');
