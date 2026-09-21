@@ -1,5 +1,6 @@
 
 (function () {
+  var LOGO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="XOXO">   <path d="M32 3c16 0 29 6 29 29s-13 29-29 29S3 48 3 32 16 3 32 3z" fill="#F9C5D1" stroke="#4A3B36" stroke-width="3"/>   <path d="M32 9c13 0 23 5 23 23S45 55 32 55 9 45 9 32 19 9 32 9z" fill="#FFF8F1"/>   <ellipse cx="18" cy="38" rx="5" ry="3" fill="#F9C5D1"/><ellipse cx="46" cy="38" rx="5" ry="3" fill="#F9C5D1"/>   <circle cx="24" cy="29" r="3.2" fill="#4A3B36"/><circle cx="40" cy="29" r="3.2" fill="#4A3B36"/>   <circle cx="25.2" cy="27.8" r="1" fill="#fff"/><circle cx="41.2" cy="27.8" r="1" fill="#fff"/>   <path d="M27 38q5 4 10 0" fill="none" stroke="#4A3B36" stroke-width="2.6" stroke-linecap="round"/>   <path d="M44 12l3 3-3 3M50 12l-3 3 3 3" fill="none" stroke="#E2708A" stroke-width="2.4" stroke-linecap="round"/> </svg>';
   var stateEl = document.getElementById('state');
   var dataEl = document.getElementById('data');
   var metaEl = document.getElementById('meta');
@@ -18,7 +19,7 @@
     ringN = 0;
     var ce = editing ? ' contenteditable="true" spellcheck="true"' : '';
     var h = '<div class="wrap">';
-    h += '<div class="top"><div><p class="kicker">XOXO · building notes</p></div><div class="bar" id="bar"></div></div>';
+    h += '<div class="top"><div class="brand">' + LOGO + '<p class="kicker">XOXO · building notes</p></div><div class="bar" id="bar"></div></div>';
     h += '<h1 data-k="title"' + ce + '>' + esc(state.title) + '</h1>';
     h += '<p class="dek" data-k="dek"' + ce + '>' + esc(state.dek) + '</p>';
     h += '<p class="by" data-k="by"' + ce + '>' + esc(state.by) + '</p>';
@@ -37,7 +38,7 @@
         var groups = '';
         if (d.moreLabel) groups += '<p class="sl">' + esc(d.moreLabel) + '</p>';
         groups += d.more.map(function (o) { return img(o, true); }).join('');
-        if (d.extra && d.extra.length) groups += '<p class="sl">' + esc(d.extraLabel || '') + '</p>' + d.extra.map(function (o) { return img(o, true); }).join('');
+        if (d.extra && d.extra.length) groups += '<p class="sl">' + esc(d.extraLabel || '') + '</p>' + (d.extraNote ? '<p class="note">' + esc(d.extraNote) + '</p>' : '') + d.extra.map(function (o) { return img(o, true); }).join('');
         h += '<details><summary>Show ' + (d.more.length + (d.extra ? d.extra.length : 0)) + ' more</summary><div class="more">' + groups + '</div></details>';
       }
       h += '</section>';
@@ -215,7 +216,7 @@
     var im = e.target.closest && e.target.closest('img[data-d]');
     var t = im || (e.target.closest && e.target.closest('[data-tip]'));
     if (!t) { if (shownFor) hideCard(); return; }
-    hoverT = setTimeout(function () { im ? showImageCard(im, false) : showTipCard(t); }, 180);
+    hoverT = setTimeout(function () { im ? showImageCard(im, false) : showTipCard(t); }, 120);
   });
   app.addEventListener('mouseout', function (e) {
     if (pinned) return;
@@ -224,6 +225,11 @@
     if (t && t === shownFor) hideCard();
   });
   app.addEventListener('mouseleave', function () { if (!pinned) hideCard(); });
+  document.addEventListener('mousemove', function (e) {
+    if (pinned || !shownFor) return;
+    var t = e.target;
+    if (t !== shownFor && !(shownFor.contains && shownFor.contains(t))) hideCard();
+  }, { passive: true });
   document.addEventListener('visibilitychange', hideCard);
   window.addEventListener('blur', hideCard);
   app.addEventListener('focusin', function (e) { if (pinned) return; var im = e.target.closest && e.target.closest('img[data-d]'); if (im) showImageCard(im, false); });

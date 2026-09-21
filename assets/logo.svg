@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="XOXO">
+  <path d="M32 3c16 0 29 6 29 29s-13 29-29 29S3 48 3 32 16 3 32 3z" fill="#F9C5D1" stroke="#4A3B36" stroke-width="3"/>
+  <path d="M32 9c13 0 23 5 23 23S45 55 32 55 9 45 9 32 19 9 32 9z" fill="#FFF8F1"/>
+  <ellipse cx="18" cy="38" rx="5" ry="3" fill="#F9C5D1"/><ellipse cx="46" cy="38" rx="5" ry="3" fill="#F9C5D1"/>
+  <circle cx="24" cy="29" r="3.2" fill="#4A3B36"/><circle cx="40" cy="29" r="3.2" fill="#4A3B36"/>
+  <circle cx="25.2" cy="27.8" r="1" fill="#fff"/><circle cx="41.2" cy="27.8" r="1" fill="#fff"/>
+  <path d="M27 38q5 4 10 0" fill="none" stroke="#4A3B36" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M44 12l3 3-3 3M50 12l-3 3 3 3" fill="none" stroke="#E2708A" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

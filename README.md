@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.svg" width="72" alt="XOXO"></p>
+
 # I played on Apple’s Playground so You don’t have to
 
 *I spent the whole of September inside Apple’s new Image Playground. Here is what came out.*
@@ -5,6 +7,8 @@
 Kyle Choi · September 2026
 
 Live page: **https://kylechoi101.github.io/xoxo-blog/** (hover any picture there for the iPhone model and the exact prompt; click to copy it).
+
+> Every seed image on this page is AI-generated with Gemini. No photograph of a real person appears here or on the live page.
 
 ---
 
@@ -46,7 +50,7 @@ I wanted to see whether the prompts held up on more realistic photos, not just p
 
 <table><tr><td align="center"><img src="assets/img/0234.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>From a real-looking photo</sub></td><td align="center"><img src="assets/img/0235.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>The same person, love you</sub></td></tr></table>
 
-177 drawings in this round. The rest are in the dropdown on the live page.
+151 drawings in this round. The rest are in the dropdown on the live page.
 
 ## Sep 9 – 10 · Scoring against the reference
 
@@ -86,23 +90,23 @@ A one-to-one comparison between an iPhone 15 Pro Max and an iPhone 18 Pro Max.
 
 <table><tr><td align="center"><img src="assets/img/0452.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27.0"><br><sub>iPhone 15 Pro Max</sub></td><td align="center"><img src="assets/img/0453.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>iPhone 18 Pro Max, anime eyes</sub></td></tr></table>
 
-64 drawings in this round. The rest are in the dropdown on the live page.
+61 drawings in this round. The rest are in the dropdown on the live page.
 
 ## Sep 20 · Apple’s new features
 
 I tested the personalization and variety options. Minor drawbacks, no real improvement.
 
-<table><tr><td align="center"><img src="assets/img/0471.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>With “large sparkling”</sub></td><td align="center"><img src="assets/img/0472.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>Without it. Two words did what the knobs could not</sub></td></tr></table>
+<table><tr><td align="center"><img src="assets/img/0468.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>With “large sparkling”</sub></td><td align="center"><img src="assets/img/0469.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>Without it. Two words did what the knobs could not</sub></td></tr></table>
 
-19 drawings in this round. The rest are in the dropdown on the live page.
+16 drawings in this round. The rest are in the dropdown on the live page.
 
 ## Sep 20 · Reading the photo
 
 I let Apple’s on-device model read the photo and write the feature keywords itself. This is still in research.
 
-<table><tr><td align="center"><img src="assets/img/0476.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27.0"><br><sub>The model said brown hair</sub></td><td align="center"><img src="assets/img/0477.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>The model said black hair. Same photo</sub></td></tr></table>
+<table><tr><td align="center"><img src="assets/img/0472.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27.0"><br><sub>The model said brown hair</sub></td><td align="center"><img src="assets/img/0473.jpg" width="300" alt="iPhone 18 Pro Max · iOS 27.0"><br><sub>The model said black hair. Same photo</sub></td></tr></table>
 
-5 drawings in this round. The rest are in the dropdown on the live page.
+4 drawings in this round. The rest are in the dropdown on the live page.
 
 ## The numbers behind the pictures
 
