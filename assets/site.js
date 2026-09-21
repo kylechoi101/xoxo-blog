@@ -216,7 +216,7 @@
     var im = e.target.closest && e.target.closest('img[data-d]');
     var t = im || (e.target.closest && e.target.closest('[data-tip]'));
     if (!t) { if (shownFor) hideCard(); return; }
-    hoverT = setTimeout(function () { im ? showImageCard(im, false) : showTipCard(t); }, 120);
+    hoverT = setTimeout(function () { im ? showImageCard(im, false) : showTipCard(t); }, 80);
   });
   app.addEventListener('mouseout', function (e) {
     if (pinned) return;
@@ -226,14 +226,19 @@
   });
   app.addEventListener('mouseleave', function () { if (!pinned) hideCard(); });
   document.addEventListener('mousemove', function (e) {
-    if (pinned || !shownFor) return;
+    if (!shownFor) return;
     var t = e.target;
-    if (t !== shownFor && !(shownFor.contains && shownFor.contains(t))) hideCard();
+    var onSubject = t === shownFor || (shownFor.contains && shownFor.contains(t));
+    var onCard = pinned && card.contains(t);
+    if (!onSubject && !onCard) hideCard();
   }, { passive: true });
   document.addEventListener('visibilitychange', hideCard);
   window.addEventListener('blur', hideCard);
-  app.addEventListener('focusin', function (e) { if (pinned) return; var im = e.target.closest && e.target.closest('img[data-d]'); if (im) showImageCard(im, false); });
-  app.addEventListener('focusout', function (e) { if (pinned) return; var im = e.target.closest && e.target.closest('img[data-d]'); if (im && im === shownFor) hideCard(); });
+  app.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var im = e.target.closest && e.target.closest('img[data-d]');
+    if (im) { e.preventDefault(); pinned && shownFor === im ? hideCard() : showImageCard(im, true); }
+  });
   app.addEventListener('click', function (e) {
     var im = e.target.closest && e.target.closest('img[data-d]');
     if (im) { e.preventDefault(); if (pinned && shownFor === im) hideCard(); else showImageCard(im, true); return; }
