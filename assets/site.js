@@ -28,7 +28,7 @@
       h += '<section id="s' + i + '" data-when="' + esc(d.when) + '">';
       h += '<div class="sh"><span class="when">' + esc(d.when) + '</span><h2 data-k="sections.' + i + '.h"' + ce + '>' + esc(s.h) + '</h2><span class="count">' + d.total + ' drawings</span><button type="button" class="cbtn" data-c="s' + i + '" hidden>Comment</button></div>';
       h += '<p class="lead" data-k="sections.' + i + '.p"' + ce + '>' + esc(s.p) + '</p>';
-      if (d.strip) h += '<div class="strip">' + d.strip.map(function (o) { return img(o, false); }).join('') + '</div>';
+      if (d.strip) h += (d.stripLabel ? '<p class="sl">' + esc(d.stripLabel) + '</p>' : '') + '<div class="strip s' + d.strip.length + '">' + d.strip.map(function (o) { return img(o, false); }).join('') + '</div>';
       if (d.pair) {
         h += '<div class="pair">' + d.pair.map(function (o, k) {
           return '<figure>' + img(o, i > 2) + '<figcaption data-k="sections.' + i + '.cap' + k + '"' + ce + '>' + esc(s['cap' + k] || '') + '</figcaption></figure>';

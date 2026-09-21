@@ -48,6 +48,10 @@ I tweaked the phrasing a bit more to see which wording survives a reliable regen
 
 I wanted to see whether the prompts held up on more realistic photos, not just portraits.
 
+*The nine promo models, AI-generated with Gemini*
+
+<p><img src="assets/img/0474.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0475.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0476.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0477.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0478.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0479.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0480.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0481.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"> <img src="assets/img/0482.jpg" width="100" alt="Seed image, AI-generated with Gemini (input, not a Playground drawing)"></p>
+
 <table><tr><td align="center"><img src="assets/img/0234.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>From a real-looking photo</sub></td><td align="center"><img src="assets/img/0235.jpg" width="300" alt="iPhone 15 Pro Max · iOS 27 RC"><br><sub>The same person, love you</sub></td></tr></table>
 
 151 drawings in this round. The rest are in the dropdown on the live page.

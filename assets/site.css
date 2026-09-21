@@ -25,6 +25,8 @@ p.lead{font-size:18px}
 .pair figure:hover figcaption{transform:translateY(-2px)}
 .pair figure:nth-child(1){--ring:var(--blush)}.pair figure:nth-child(2){--ring:var(--mint)}
 .strip{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin:18px 0 10px;padding:6px 4px}
+.strip.s9{grid-template-columns:repeat(9,1fr);gap:10px}
+@media (max-width:560px){.strip.s9{grid-template-columns:repeat(5,1fr)}}
 @media (max-width:560px){.strip{grid-template-columns:repeat(4,1fr)}}
 .strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28%;display:block;background:var(--tint);border:3px solid #fff;box-shadow:0 0 0 2px var(--ring);transform:rotate(var(--tilt))}
 img.r0{--ring:var(--blush)}img.r1{--ring:var(--peach)}img.r2{--ring:var(--mint)}img.r3{--ring:var(--lav)}
