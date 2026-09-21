@@ -1,6 +1,7 @@
 
 :root{--ground:#FFF8F1;--paper:#FFFFFF;--ink:#4A3B36;--muted:#8A7670;--rule:#F7D6DE;--berry:#E2708A;--berry-soft:#FDE7EC;--tint:#FFF1E4;--focus:#E2708A;--c1:#4A3B36;--c2:#CDEBDD;--band:#FFEFE0;--blush:#F9C5D1;--peach:#FFD9B8;--mint:#CDEBDD;--lav:#DDD6F5;--cocoa:#4A3B36;
 --display:"Instrument Serif",Georgia,"Times New Roman",serif;--sans:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,sans-serif}
+[hidden]{display:none!important}
 html{background:#FFF8F1}
 body{background:#FFF8F1;color:#4A3B36;font:18px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 .wrap{max-width:880px;margin:0 auto;padding-inline:16px;padding-block:40px 80px}
